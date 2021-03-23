@@ -27,7 +27,7 @@ public class User extends AbstractPerson {
     @Column(length = MAX_LENGTH)
     @Size(max = MAX_LENGTH)
     private String aboutMe;
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinTable(
             name = "user_address",
             joinColumns = @JoinColumn(name = "user_id"),
@@ -47,7 +47,7 @@ public class User extends AbstractPerson {
 
     public User() {
         super();
-    };
+    }
 
     public long getId() {
         return id;

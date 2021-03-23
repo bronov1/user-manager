@@ -4,11 +4,13 @@ import com.wamisoftware.usermanager.model.User;
 import com.wamisoftware.usermanager.service.UserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@Validated
 @RequestMapping("users")
 public class UserController {
 

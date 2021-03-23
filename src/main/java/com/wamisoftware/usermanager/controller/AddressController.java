@@ -1,15 +1,16 @@
 package com.wamisoftware.usermanager.controller;
 
 import com.wamisoftware.usermanager.model.Address;
-import com.wamisoftware.usermanager.model.User;
 import com.wamisoftware.usermanager.service.AddressService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@Validated
 @RequestMapping("addresses")
 public class AddressController {
 
